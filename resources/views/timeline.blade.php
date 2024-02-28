@@ -84,7 +84,7 @@
               <div>
                 <i class="fas fa-envelope bg-blue"></i>
                 <div class="timeline-item">
-                  <span class="time"><i class="fas fa-clock"></i> 12:05</span>
+                  <span class="time"><i class="fas fa-clock"></i></span>
                   <h3 class="timeline-header">{{ $galeri->judul }}</h3>
 
                   <div class="timeline-body">
@@ -96,6 +96,7 @@
                   <div class="timeline-footer">
                     <a href="#" data-toggle="modal" data-target="#modalEdit{{ $galeri->id }}" class="btn btn-primary btn-sm">Edit</a>
                     <a href="" data-toggle="modal" data-target="#hapusfoto{{ $galeri->id }}" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="{{ asset('images/'.$galeri->foto) }}"download class="btn btn-success btn-sm float-right"><i class="fas fa-download"></i> Download</a>
                   </div>
                 </div>
               </div>
@@ -216,7 +217,6 @@
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('dist/js/demo.js') }}"></script>
+
 </body>
 </html>
